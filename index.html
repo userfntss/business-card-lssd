@@ -249,7 +249,6 @@
       position: relative;
     }
 
-    /* Contenedor de la Placa ampliado y alineado con la línea horizontal */
     .badge-container {
       width: 145px;
       height: 145px;
@@ -258,7 +257,7 @@
       align-items: center;
       flex-shrink: 0;
       position: absolute;
-      top: 10px; /* Alinea la punta de la estrella con la línea negra */
+      top: 10px;
       left: 0;
     }
 
@@ -276,7 +275,7 @@
       flex-direction: column;
       justify-content: flex-start;
       margin-top: 10px;
-      margin-left: 155px; /* Ajustado para dejar espacio a la placa más grande */
+      margin-left: 155px;
     }
 
     .header-text-block {
@@ -429,6 +428,8 @@
           <label for="select-station-preset">Select Station Preset</label>
           <select id="select-station-preset">
             <option value="davis" selected>Davis Sheriff's Station</option>
+            <option value="hall_of_justice">Hall of Justice</option>
+            <option value="training_center">Eugene Biskarrat Regional Training Center</option>
             <option value="custom">Custom (Manual Input)</option>
           </select>
         </div>
@@ -537,7 +538,7 @@
                 </div>
                 <div class="card-divider-row">
                   <div class="slogan">"A Tradition of Service Since 1850"</div>
-                  <div class="sheriff-name" id="card-sheriff">Robert Luna - Sheriff</div>
+                  <div class="sheriff-name" id="card-sheriff"></div>
                 </div>
               </div>
             </div>
@@ -576,6 +577,18 @@
         station: "DAVIS SHERIFF'S STATION",
         addr1: "301 Innocence Boulevard",
         addr2: "City of Davis, Los Santos",
+        website: "www.lssd-es.gta.world"
+      },
+      hall_of_justice: {
+        station: "HALL OF JUSTICE",
+        addr1: "300 Innocence Boulevard",
+        addr2: "City of Davis, Los Santos",
+        website: "www.lssd-es.gta.world"
+      },
+      training_center: {
+        station: "EUGENE BISKARRAT REGIONAL TRAINING CENTER",
+        addr1: "1060 Greenwich Parkway",
+        addr2: "Los Santos International Airport, Los Santos",
         website: "www.lssd-es.gta.world"
       }
     };
