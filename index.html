@@ -249,7 +249,6 @@
       position: relative;
     }
 
-    /* Contenedor de la Placa corregido para mantener proporción 1:1 */
     .badge-container {
       width: 130px;
       height: 130px;
@@ -429,7 +428,6 @@
           <label for="select-station-preset">Select Station Preset</label>
           <select id="select-station-preset">
             <option value="davis" selected>Davis Sheriff's Station</option>
-            <option value="compton">Compton Sheriff's Station</option>
             <option value="custom">Custom (Manual Input)</option>
           </select>
         </div>
@@ -439,16 +437,16 @@
       <div class="form-grid">
         <div class="form-group full-width">
           <label for="input-fullname">Full Name</label>
-          <input type="text" id="input-fullname" value="Stefan Wojciechowski">
+          <input type="text" id="input-fullname" value="Firstname Lastname">
         </div>
 
         <div class="form-group">
           <label for="input-rank">Rank</label>
           <select id="input-rank">
-            <option value="Deputy Sheriff">Deputy Sheriff</option>
+            <option value="Deputy Sheriff" selected>Deputy Sheriff</option>
             <option value="Deputy Sheriff (Bonus I)">Deputy Sheriff (Bonus I)</option>
             <option value="Deputy Sheriff (Bonus II)">Deputy Sheriff (Bonus II)</option>
-            <option value="Sergeant" selected>Sergeant</option>
+            <option value="Sergeant">Sergeant</option>
             <option value="Lieutenant">Lieutenant</option>
             <option value="Captain">Captain</option>
             <option value="Commander">Commander</option>
@@ -461,7 +459,7 @@
 
         <div class="form-group">
           <label for="input-sheriff">Sheriff Name</label>
-          <input type="text" id="input-sheriff" value="LFM - Sheriff">
+          <input type="text" id="input-sheriff" value="Robert Luna - Sheriff">
         </div>
 
         <div class="form-group full-width">
@@ -486,17 +484,17 @@
 
         <div class="form-group">
           <label for="input-office">Office Phone</label>
-          <input type="text" id="input-office" value="901">
+          <input type="text" id="input-office" value="(310) 000-0000">
         </div>
 
         <div class="form-group">
           <label for="input-cell">Cell Phone</label>
-          <input type="text" id="input-cell" value="68532474">
+          <input type="text" id="input-cell" value="(310) 000-0000">
         </div>
 
         <div class="form-group full-width">
           <label for="input-email">Email Address</label>
-          <input type="text" id="input-email" value="s.wojciechowski@lssd.org">
+          <input type="text" id="input-email" value="user@lssd.org">
         </div>
       </div>
 
@@ -529,7 +527,7 @@
             <!-- Sección superior -->
             <div class="card-top-row">
               <div class="badge-container">
-                <img id="card-badge" src="https://i.imgur.com/UTHtAe6.png" alt="Rank Badge" crossorigin="anonymous">
+                <img id="card-badge" src="https://i.imgur.com/gJU1S0O.png" alt="Rank Badge" crossorigin="anonymous">
               </div>
               <div class="header-right-column">
                 <div class="header-text-block">
@@ -538,7 +536,7 @@
                 </div>
                 <div class="card-divider-row">
                   <div class="slogan">"A Tradition of Service Since 1850"</div>
-                  <div class="sheriff-name" id="card-sheriff">LFM - Sheriff</div>
+                  <div class="sheriff-name" id="card-sheriff">Robert Luna - Sheriff</div>
                 </div>
               </div>
             </div>
@@ -546,8 +544,8 @@
             <!-- Cuerpo principal -->
             <div class="card-body">
               <div class="officer-details">
-                <div class="officer-name" id="card-fullname">Stefan Wojciechowski</div>
-                <div class="officer-rank" id="card-rank">SERGEANT</div>
+                <div class="officer-name" id="card-fullname">Firstname Lastname</div>
+                <div class="officer-rank" id="card-rank">DEPUTY SHERIFF</div>
               </div>
             </div>
 
@@ -560,9 +558,9 @@
                 <div id="card-website">www.lssd-es.gta.world</div>
               </div>
               <div class="contact-info">
-                <div><span>Office:</span> <span id="card-office">901</span></div>
-                <div><span>Cell:</span> <span id="card-cell">Número</span></div>
-                <div><span>Email:</span> <span id="card-email">n.apellido@lssd.org</span></div>
+                <div><span>Office:</span> <span id="card-office">(310) 000-0000</span></div>
+                <div><span>Cell:</span> <span id="card-cell">(310) 000-0000</span></div>
+                <div><span>Email:</span> <span id="card-email">user@lssd.org</span></div>
               </div>
             </div>
           </div>
@@ -578,12 +576,6 @@
         addr1: "301 Innocence Boulevard",
         addr2: "City of Davis, Los Santos",
         website: "www.lssd-es.gta.world"
-      },
-      compton: {
-        station: "Compton Sheriff's Station",
-        addr1: "301 S. Willowbrook Ave",
-        addr2: "Compton, CA 90220",
-        website: "www.compton.lasd.org"
       }
     };
 
@@ -666,16 +658,16 @@
 
     document.getElementById('btn-reset').addEventListener('click', () => {
       presetSelector.value = 'davis';
-      inputs.fullname.value = "Stefan Wojciechowski";
-      inputs.rank.value = "Sergeant";
-      inputs.sheriff.value = "LFM - Sheriff";
+      inputs.fullname.value = "Firstname Lastname";
+      inputs.rank.value = "Deputy Sheriff";
+      inputs.sheriff.value = "Robert Luna - Sheriff";
       inputs.station.value = stationPresets.davis.station;
       inputs.addr1.value = stationPresets.davis.addr1;
       inputs.addr2.value = stationPresets.davis.addr2;
       inputs.website.value = stationPresets.davis.website;
-      inputs.office.value = "901";
-      inputs.cell.value = "68532474";
-      inputs.email.value = "s.wojciechowski@lssd.org";
+      inputs.office.value = "(310) 000-0000";
+      inputs.cell.value = "(310) 000-0000";
+      inputs.email.value = "user@lssd.org";
       updateCard();
     });
 
