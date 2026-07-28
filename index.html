@@ -249,21 +249,22 @@
       position: relative;
     }
 
+    /* Contenedor de la Placa ampliado y alineado con la línea horizontal */
     .badge-container {
-      width: 130px;
-      height: 130px;
+      width: 145px;
+      height: 145px;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-shrink: 0;
       position: absolute;
-      top: 0;
+      top: 10px; /* Alinea la punta de la estrella con la línea negra */
       left: 0;
     }
 
     .badge-container img {
-      max-width: 130px;
-      max-height: 130px;
+      max-width: 145px;
+      max-height: 145px;
       width: auto;
       height: auto;
       filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.2));
@@ -275,7 +276,7 @@
       flex-direction: column;
       justify-content: flex-start;
       margin-top: 10px;
-      margin-left: 140px;
+      margin-left: 155px; /* Ajustado para dejar espacio a la placa más grande */
     }
 
     .header-text-block {
@@ -329,7 +330,7 @@
       align-items: center;
       justify-content: center;
       flex: 1;
-      margin-left: 130px;
+      margin-left: 145px;
       margin-top: -10px;
     }
 
